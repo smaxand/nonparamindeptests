@@ -25,7 +25,15 @@
 
 
 \begin{document}
-	\section*{Nonparametric Tests for Independence in R: Table 1 from \cite{HerMax18}}
+	\section*{Nonparametric Tests for Independence in R}
+	From \cite{HerMax18}, tests for different types of dependence structures:
+	\begin{itemize}
+		\item[1.] {\bf Bivariate dependence:} Testing for dependence between two random variables $x_1$ and $x_2$. The corresponding null hypothesis is $H_0: F_{x_1,x_2}(x_1,x_2)=F_{x_1}(x_1)F_{x_2}(x_2)$ with joint distribution function $F_{x_1,x_2}$ and marginals $F_{x_1},$ $F_{x_2}.$ 
+		\item[2.]{\bf Groupwise dependence:} Analyzing two sets of variables can be thought of as a generalization of bivariate dependence tests where two disjoint subsets of $\{x_1,\ldots,x_p\}$ are subjected to testing, i.e., $\bm{x}_1\in\mathbb{R}^{p_1}$ and $\bm{x}_2\in\mathbb{R}^{p_2}$ such that $p_1+p_2=p$. The corresponding null hypothesis is $H_0: F_{\bm{x}_1,\bm{x}_2}(\bm{x}_1,\bm{x}_2)=F_{\bm{x}_1}(\bm{x}_1)F_{\bm{x}_2}(\bm{x}_2)$ for multivariate distribution functions $F_{\bm{x}_1,\bm{x}_2},\, F_{\bm{x}_1}$ and $F_{\bm{x}_2}$. Furthermore, some tests allow to diagnose the dependence between more than two disjoint subsets, where $p_1+\ldots+p_c=p$ and $c>2.$ 
+		\item[3.]{\bf Mutual dependence:} To test for overall independence within a set of random variables $\{x_1,\ldots,x_p\}$ the null hypothesis is formulated as $H_0: F_{x_1,\ldots,x_p}(x_1,\ldots,x_p)=F_{x_1}(x_1)\cdots F_{x_p}(x_p).$ The tests exploit the fact that mutual independence is equivalent to independence within all subsets of $\{x_1,\ldots,x_p\}$. This hypothesis is equivalent to stating groupwise independence and choosing subsets of size $p_1=p_2=\ldots=p_c=1$. 
+	\end{itemize}
+	
+	
 	
 \begin{table}[ht]
  \caption{\textsf{R} packages and functions corresponding to the procedures described in Section 3 of \cite{HerMax18}. }
