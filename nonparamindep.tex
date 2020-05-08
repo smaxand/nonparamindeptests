@@ -1,0 +1,56 @@
+
+
+
+\documentclass[11pt]{article}
+\usepackage{a4wide, xspace}
+%\usepackage[ngerman, english]{babel}
+\usepackage{amsmath,pifont,amsfonts,amssymb,latexsym}
+\usepackage{theorem}
+\usepackage{fancyhdr,enumerate}
+\usepackage{nicefrac}
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage[pdftex]{graphicx}
+\usepackage{pdflscape}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage[font=footnotesize]{caption}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%NEWCOMMANDS
+%
+%\renewcommand{\baselinestretch}{1.5}
+
+
+
+
+\begin{document}
+	\section*{Nonparametric Tests for Independence in R: Table 1 from \cite{HerMax18}}
+	
+\begin{table}[ht]
+ \caption{\textsf{R} packages and functions corresponding to the procedures described in Section 3 of \cite{HerMax18}. }
+\label{tab:Rpack}\small{\centering
+  \begin{tabular}{lllll}\toprule
+ 
+   &classical  & spatial rank  &  empirical copula  & distance covariance \\    
+		\midrule\midrule
+\textsf{R} package& \textit{Hmisc} &\textit{SpatialNP} &\textit{copula} &\textit{energy}  \\
+&\citep{Hmisc}&\citep{SpatialNP}&\citep{copula}&\citep{energy}\\
+&&&&\textit{steadyICA} \\
+&&&&\citep{steadyICA}\\
+\midrule
+\multicolumn{3}{l}{\textsf{R} function for distinct dependence levels}&&\\
+ bivariate &\texttt{hoeffd} ($d$)&\texttt{sr.indep.test} ($sr$)&\texttt{indepTest} ($B$)&\texttt{indep.test} ($dCov$)\\
+ mutual &Wilks' Lambda ($L$)& Fisher comb. of $sr$&\texttt{indepTest} ($W$, $B$)&\texttt{permTest} ($dCov$)\\
+ groupwise &Wilks' Lambda ($L$)&\texttt{sr.indep.test} ($sr$)&\texttt{multIndepTest} ($B$)&\texttt{indep.test} ($dCov$)\\
+  \bottomrule
+  \end{tabular}                     }
+\end{table}
+
+
+%\nocite{*}
+\bibliographystyle{newapa}
+\bibliography{lit_nonparamindep}
+
+
+\end{document}
